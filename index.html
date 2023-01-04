@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--  created by Tivotal  -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animated Bottom Navigation - Tivotal</title>
+
+    <!-- css file -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="navigation">
+      <ul class="nav-list">
+        <li class="list active">
+          <a href="#">
+            <span class="icon">
+              <ion-icon name="home-outline"></ion-icon>
+            </span>
+            <span class="text">Home</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="#">
+            <span class="icon">
+              <ion-icon name="chatbox-outline"></ion-icon>
+            </span>
+            <span class="text">Message</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="#">
+            <span class="icon">
+              <ion-icon name="person-outline"></ion-icon>
+            </span>
+            <span class="text">Profile</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="#">
+            <span class="icon">
+              <ion-icon name="camera-outline"></ion-icon>
+            </span>
+            <span class="text">Camera</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="#">
+            <span class="icon">
+              <ion-icon name="settings-outline"></ion-icon>
+            </span>
+            <span class="text">Settings</span>
+          </a>
+        </li>
+
+        <span class="indicator"></span>
+      </ul>
+    </div>
+
+    <script>
+      let list = document.querySelectorAll(".list");
+
+      function activeLink() {
+        list.forEach((item) => item.classList.remove("active"));
+
+        this.classList.add("active");
+      }
+
+      list.forEach((item) => item.addEventListener("click", activeLink));
+    </script>
+
+    <!--icons-->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
